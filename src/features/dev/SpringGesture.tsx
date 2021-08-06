@@ -3,7 +3,6 @@ import { useSpring, animated, to } from "@react-spring/web"
 import { useGesture } from "react-use-gesture"
 // import PropTypes from 'prop-types';
 
-
 export default function SpringGesture(props: any) {
   useEffect(() => {
     const preventDefault = (e: Event) => e.preventDefault()
@@ -43,8 +42,8 @@ export default function SpringGesture(props: any) {
         api({
           // rotateX: calcX(py, y.get()),
           // rotateY: calcY(px, x.get()),
-          rotateX: 50,
-          scale: 2.1,
+          // rotateX: 50,
+          // scale: 2.1,
           ...props.mouseEnter,
         }),
       onHover: ({ hovering }) =>
@@ -66,8 +65,8 @@ export default function SpringGesture(props: any) {
           ref={domTarget}
           className="card"
           style={{
-            borderRadius:props.borderRadius,
-            transform: "perspective(600px)",
+            borderRadius: props.borderRadius,
+            transform: "perspective(400px)",
             x,
             y,
             scale: to([scale, zoom], (s, z) => s + z),
