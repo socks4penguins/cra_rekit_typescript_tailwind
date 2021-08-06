@@ -9,6 +9,10 @@ export default function SpringCard() {
   const [hover, setHover] = useState(false)
   const logoTarget = useRef(null)
   const bottom = useSpring({ bottom: hover ? "55%" : "50%" })
+  const imageSize = useSpring({
+    width: hover ? "48px" : "32px",
+    height: hover ? "48px" : "32px",
+  })
 
   return (
     <div
@@ -30,17 +34,18 @@ export default function SpringCard() {
             <div className="text-xl font-bold">text here</div>
             <div className=" ">text here</div>
           </div>
-          <div
-            // style={hover ? { zoom: 1.2 } : { zoom: 1 }}
+          <animated.div
+            style={imageSize}
             ref={logoTarget}
             className="absolute top-5 right-5"
           >
             <img
-              className="w-8 h-8 rounded-full p-1 bg-black object-contain "
+              style={{ transform: "translate(25%, -25%)" }}
+              className="rounded-full p-1 bg-black object-contain "
               src={react_logo}
               alt=""
             />
-          </div>
+          </animated.div>
         </div>
       </SpringGesture>
       <animated.div
