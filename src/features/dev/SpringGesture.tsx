@@ -66,7 +66,7 @@ export default function SpringGesture(props: any) {
           className="card"
           style={{
             borderRadius: props.borderRadius,
-            transform: "perspective(400px)",
+            // transform: "perspective(400px)",
             x,
             y,
             scale: to([scale, zoom], (s, z) => s + z),
