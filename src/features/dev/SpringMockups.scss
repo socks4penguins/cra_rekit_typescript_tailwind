@@ -1,0 +1,9 @@
+@import "../../styles/mixins";
+
+.dev-spring-mockups {
+  width: 674px;
+  height: 498px;
+  perspective: 5000px;
+    perspective-origin: left bottom;
+    transform-style: flat;
+}

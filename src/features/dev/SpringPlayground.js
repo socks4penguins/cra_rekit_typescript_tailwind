@@ -2,11 +2,12 @@ import React from "react"
 import SpringAnimator from "./SpringAnimator"
 import SpringCard from "./SpringCard"
 import SpringGesture from "./SpringGesture"
+import SpringMockups from "./SpringMockups"
 // import PropTypes from 'prop-types';
 
 export default function SpringPlayground() {
   return (
-    <div className="dev-spring-playground fill flex flex-col items-center bg-gray-400 pt-16">
+    <div className="dev-spring-playground fill flex flex-col items-center bg-blue-300 pt-16">
       {/* <div className="vertical layout flex bg-blue-500">
         <div className="p-4 flex flex-row"></div>
       </div> */}
@@ -29,8 +30,9 @@ export default function SpringPlayground() {
           className="relative"
           style={{ width: "300px", height: "300px" }}
         > */}
-        <SpringCard />
-        <SpringGesture
+        {/* <SpringCard /> */}
+        <SpringMockups />
+        {/* <SpringGesture
           // style={{ width: "300px", height: "300px" }}
           // classes={{ root: "absolute fill" }}
           borderRadius="30px"
@@ -46,13 +48,7 @@ export default function SpringPlayground() {
               borderRadius: "30px",
             }}
           />
-        </SpringGesture>
-        {/* <SpringGesture
-            classes={{ root: "absolute fill" }}
-            mouseEnter={{ rotateX: 0, rotateY: 0, scale: 1.1 }}
-          >
-            <img src="../../images/pic.png" alt="" className="h-"/>
-          </SpringGesture> */}
+        </SpringGesture> */}
       </div>
     </div>
     // </div>

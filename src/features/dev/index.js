@@ -24,3 +24,4 @@ export { default as SpringAnimator } from './SpringAnimator';
 export { default as SpringPlayground } from './SpringPlayground';
 export { default as SpringGesture } from './SpringGesture';
 export { default as SpringCard } from './SpringCard';
+export { default as SpringMockups } from './SpringMockups';
