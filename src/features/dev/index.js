@@ -1,4 +1,4 @@
-export { default as Preview } from './Preview';
+// export { default as Preview } from './Preview';
 export { default as PreviewIframe } from './PreviewIframe';
 // export { default as FirebaseStorageDev } from './FirebaseStorageDev';
 // export { default as FirebaseAuthDev } from './FirebaseAuthDev';
@@ -23,3 +23,4 @@ export { default as DevicePreview } from './DevicePreview';
 export { default as SpringAnimator } from './SpringAnimator';
 export { default as SpringPlayground } from './SpringPlayground';
 export { default as SpringGesture } from './SpringGesture';
+export { default as SpringCard } from './SpringCard';

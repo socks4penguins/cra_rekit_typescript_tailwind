@@ -1,0 +1,13 @@
+@import "../../styles/mixins";
+
+.dev-spring-card {
+  width: 218px;
+  height: 360px;
+  #mainGrow {
+    background-image: linear-gradient(
+      209.21deg,
+      rgb(4, 55, 174) 13.57%,
+      rgb(29, 81, 146) 98.38%
+    );
+  }
+}
