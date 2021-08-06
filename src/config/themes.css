@@ -1,0 +1,51 @@
+body {
+  --colors-primary: deeppink;
+  --size-nav-bar: 70px;
+  --border-menu: 1px solid #474a4d;
+  --border-radius-menu: 8px;
+  --speed-menu-animation: 500ms;
+  --colors-menu-background: #242526;
+  --colors-menu-background-accent: #484a4d;
+  --colors-menu-disabled-button-text: #83878b;
+  --colors-text-menu-primary: #e4e6eb;
+  --colors-light-menu-background: white;
+  --colors-light-menu-text: rgb(110, 107, 107);
+}
+.menu-item .MuiButtonBase-root {
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.MuiButtonBase-root.cancel {
+  margin-right: 8px;
+}
+.cancel .MuiButton-label {
+  color: var(--colors-primary);
+}
+.submit.MuiButtonBase-root:hover:not(.disabled) {
+  background-color: var(--colors-primary);
+  opacity: 1;
+}
+.submit .MuiButton-label {
+  color: var(--colors-text-menu-primary);
+}
+.MuiButtonBase-root.submit {
+  background-color: var(--colors-primary);
+  opacity: 0.7;
+}
+.submit.disabled .MuiButton-label {
+  color: var(--colors-menu-disabled-button-text);
+}
+.MuiButtonBase-root.submit.disabled {
+  background-color: var(--colors-menu-background-accent);
+}
+
+body[data-theme="light"] {
+  --colors-navbar-background: white;
+  --colors-text-primary: #00040e;
+  --colors-text-secondary: #53565a;
+}
+body[data-theme="dark"] {
+  --colors-navbar-background: #28292b;
+  --colors-text-primary: #e4e6eb;
+  --colors-text-secondary: #b0b3b8;
+}

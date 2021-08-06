@@ -1,0 +1,20 @@
+@import "../../styles/mixins";
+
+.home-welcome-page {
+  text-align: center;
+  .app {
+    text-align: center;
+  }
+
+  .nav-bar {
+    background-color: var(--colors-navbar-background);
+    height: var(--size-nav-bar);
+    padding: 0 2% 0 5%; // it is important to have 0 padding top and bottom for overflowHorizontal menu to work
+    box-sizing: border-box;
+  }
+
+  #leftMenu {
+    // width: 20%;
+    overflow: auto;
+  }
+}

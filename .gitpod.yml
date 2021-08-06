@@ -1,0 +1,13 @@
+ports:
+  - port: 3000
+  - port: 4000
+  - port: 8080
+  
+tasks:
+  - init: npm i
+  - command: npm i -g firebase-tools rekit && yarn start
+
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
+    - esbenp.prettier-vscode

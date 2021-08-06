@@ -1,0 +1,80 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /dev/preview {
+      allow read, write
+    }
+
+    match /to%20do/{docId} {
+      allow read, write
+    }
+
+    match /user_data/{uid} {
+      allow read, write
+      :if (isSysAdmin() 
+        || isUserId(request, uid)
+      );
+    }
+    
+    match /user_data/{uid}/{collection}/{docId} {
+      allow read, write
+      :if (isSysAdmin() 
+        || isUserId(request, uid)
+      );
+    }
+    
+        /// functions 
+    
+    function isSysAdmin() {
+      // return (sysadmin in request.auth.token
+      // && sysadmin in request.auth.token.sysadmin == true
+      // );
+      return false;
+    }
+    
+    function paidUntilUnchanged(request){
+      return (
+        !('account' in incomingData(request))
+        || ('account' in incomingData(request) && !('paidUntil' in incomingData(request).account))
+        || (existingData(request).account.paidUntil == incomingData(request).account.paidUntil)
+        );
+    }
+    
+    function uid(request){
+      return request.auth.uid
+    }
+    
+    function isUserId(request,uid){
+      return request.auth.uid == uid
+    }
+    
+    // function getUserData() {
+    //   return get(/databases/$(database)/documents/users/$(uid()))
+    // }
+    
+    function fieldUnchanged(request, field){
+      return existingData(request)[field] == incomingData(request)[field]
+    }
+
+    function existingData(request) {
+      return request.resource.data
+    }
+    
+    function incomingData(request) {
+      return request.resource.data
+    }
+    
+    function emailVerified(request) {
+      return request.auth.token.email_verified
+    }
+    
+    function isOwner(request) {
+      return request.resource.data.createdBy == uid(request)
+    }
+
+    function isSignedIn(request) {
+      return request.auth != null && uid(request) != null
+    }
+  }
+}
