@@ -1,4 +1,5 @@
 import React from "react"
+import AnimList from "./AnimList"
 import SpringAnimator from "./SpringAnimator"
 import SpringCard from "./SpringCard"
 import SpringGesture from "./SpringGesture"
@@ -16,7 +17,7 @@ export default function SpringPlayground() {
           // initial={{
           //   rotateX: 0,
           //   rotateY: 0,
-          //   rotateZ: 0,
+          //   rotateZ: 0,  
           //   scale: 1,
           //   zoom: 0,
           //   x: 0,
@@ -30,7 +31,8 @@ export default function SpringPlayground() {
           className="relative"
           style={{ width: "300px", height: "300px" }}
         > */}
-        {/* <SpringCard /> */}
+        <AnimList />
+        <SpringCard />
         <SpringMockups />
         {/* <SpringGesture
           // style={{ width: "300px", height: "300px" }}

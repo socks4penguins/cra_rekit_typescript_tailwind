@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react"
-import { useSpring, animated } from "@react-spring/web"
+// import { useSpring, animated } from "@react-spring/web"
 
 import card2 from "../../images/mockup-card2.svg"
 import content from "../../images/mockup-content.svg"
@@ -12,10 +12,10 @@ export default function SpringMockups() {
   const [hover, setHover] = useState(false)
   // const logoTarget = useRef(null)
   // const top = useSpring({ top: hover ? "400px": "370px"   })
-  const imageSize = useSpring({
-    width: hover ? "48px" : "32px",
-    height: hover ? "48px" : "32px",
-  })
+  // const imageSize = useSpring({
+  //   width: hover ? "48px" : "32px",
+  //   height: hover ? "48px" : "32px",
+  // })
 
   const images = [
     {
@@ -28,7 +28,8 @@ export default function SpringMockups() {
         top: "150px",
         left: "-37px",
       },
-      hoverStyle: useSpring({ top: "110px", left: "-40px" }),
+      // hoverStyle: useSpring({ top: "110px", left: "-40px" }),
+      hoverStyle: { top: "110px", left: "-40px" },
     },
     {
       url: card2,
@@ -40,7 +41,7 @@ export default function SpringMockups() {
         top: "150px",
         left: "176px",
       },
-      hoverStyle: useSpring({ top: "110px", left: "190px" }),
+      hoverStyle: { top: "110px", left: "190px" },
     },
     {
       url: content,
@@ -64,7 +65,7 @@ export default function SpringMockups() {
         left: "40px",
         backdropFilter: "blur(10px)",
       },
-      hoverStyle: useSpring({ top: "400px", left: "-40px" }),
+      hoverStyle: { top: "400px", left: "-40px" },
     },
     {
       url: bg3,
@@ -76,7 +77,7 @@ export default function SpringMockups() {
         left: "340px",
         backdropFilter: "blur(10px)",
       },
-      hoverStyle: useSpring({ left: "370px" }),
+      hoverStyle: { left: "370px" },
     },
   ]
 
@@ -90,7 +91,7 @@ export default function SpringMockups() {
       onMouseEnter={(e) => setHover(true)}
       onMouseLeave={(e) => setHover(false)}
     >
-      {images.map((img, index) =>
+      {images.map((img, index) => (
         // false ? (
         //   <animated.img
         //     key={index}
@@ -105,21 +106,18 @@ export default function SpringMockups() {
         //     }}
         //   />
         // ) :
-          (
-          <animated.img
-            key={index}
-            src={img.url}
-            alt=""
-            style={{
-              transition: "all 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0s",
-              position: "absolute",
-              ...img.style,
-              ...(hover ? img.hoverStyle : tilt),
-              
-            }}
-          />
-        )
-      )}
+        <img
+          key={index}
+          src={img.url}
+          alt=""
+          style={{
+            transition: "all 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0s",
+            position: "absolute",
+            ...img.style,
+            ...(hover ? img.hoverStyle : tilt),
+          }}
+        />
+      ))}
     </div>
   )
 }
