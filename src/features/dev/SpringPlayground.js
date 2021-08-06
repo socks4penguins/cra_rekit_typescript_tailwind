@@ -22,21 +22,33 @@ export default function SpringPlayground() {
           //   config: { mass: 5, tension: 350, friction: 40 },
           // }}
           // mouseLeave={{ rotateX: 0, rotateY: 0, scale: 1 }}
-          mouseEnter={{ rotateX: 0, rotateY: 0, scale: 2.1 }}
+          mouseEnter={{ rotateX: 0, rotateY: 0, scale: 1.1 }}
         />
-
-        <SpringGesture mouseEnter={{ rotateX: 0, rotateY: 0, scale: 2.1 }}>
-          <div
-            className="fill"
-            style={{ boxShadow: "#1d5192 0px 20px 80px 0px" }}
-          />
-        </SpringGesture>
-        <SpringGesture mouseEnter={{ rotateX: 0, rotateY: 0, scale: 2.1 }}>
-          <img
-            src="https://drscdn.500px.org/photo/126979479/w%3D440_h%3D440/v2?webp=true&v=2&sig=09ea71b0ddb91e24a59cecfb79a0189a2ab575d10372d3e8d3258e38f97a6a49"
-            alt=""
-          />
-        </SpringGesture>
+        <div
+          className="relative"
+          style={{ width: "300px", height: "300px" }}
+        >
+          <SpringGesture
+            classes={{ root: "absolute fill" }}
+            borderRadius="30px"
+            mouseEnter={{ rotateX: 0, rotateY: 0, scale: 1.1 }}
+          >
+            <div
+              // className="fill"
+              style={{
+                backgroundImage:
+                  "linear-gradient(209.21deg, rgb(22, 155, 173) 13.57%, rgb(0, 54, 135) 98.38%)",
+                   borderRadius: "30px"
+              }}
+            />
+          </SpringGesture>
+          {/* <SpringGesture
+            classes={{ root: "absolute fill" }}
+            mouseEnter={{ rotateX: 0, rotateY: 0, scale: 1.1 }}
+          >
+            <img src="../../images/pic.png" alt="" className="h-"/>
+          </SpringGesture> */}
+        </div>
       </div>
     </div>
   )
