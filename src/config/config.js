@@ -4,24 +4,21 @@ export const productionFeatures = {
   urbRoute: false, // leave the reducer alone if you don't want to break things!
   referrals: true,
   help: true,
-};
+}
 
-export const devIconInProduction = false;
+export const devIconInProduction = false
 
 export const firebase = {
   development: {
-    config: {
-    
-    },
-    vapidKey:""
+    config: {},
+    vapidKey: "",
   },
   production: {
-    config: {
-    },
-    vapidKey:""
+    config: {},
+    vapidKey: "",
   },
   reCAPTCHA_site_key: "",
-};
+}
 
 // TODO integrate these
 
@@ -30,10 +27,10 @@ export const firebase = {
 // export const SignInPage = <Component />;
 
 export const onAuthStateChanged = (auth) => {
-  console.log("auth changed");
-};
+  console.log("auth changed")
+}
 
-export const defaultTheme = "dark";
+export const defaultTheme = "dark"
 
 // export const logoThumbnail =
 // export const logoSmall =

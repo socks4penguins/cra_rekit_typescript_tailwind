@@ -10,6 +10,7 @@ import Tools from "./tools/Content"
 import FirestoreLoadDocs from "./docs/FirestoreLoadDocs"
 import FirestoreAddDocs from "./docs/FirestoreAddDocs"
 import FirestoreSetDocs from "./docs/FirestoreSetDocs"
+import SpringPlayground from "./SpringPlayground"
 // import ToDo from "./demos/ToDo";
 // import Ws2Files from "../urb/Ws2Files"
 import BlocklyBuilder from "./BlocklyBuilder"
@@ -31,6 +32,7 @@ export default {
   path: "dev",
   childRoutes: [
     { path: "blockly_test", component: BlocklyTest },
+    { path: "spring", component: SpringPlayground },
     {
       path: "blockly_builder",
       childRoutes: [
