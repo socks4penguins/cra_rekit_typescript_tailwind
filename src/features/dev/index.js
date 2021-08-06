@@ -22,3 +22,4 @@ export { default as MultiPreview } from './MultiPreview';
 export { default as DevicePreview } from './DevicePreview';
 export { default as SpringAnimator } from './SpringAnimator';
 export { default as SpringPlayground } from './SpringPlayground';
+export { default as SpringGesture } from './SpringGesture';
